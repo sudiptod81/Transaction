@@ -1,6 +1,5 @@
 class SearchController < ApplicationController
   def index
-    current_user = User.find_by_id(session[:current_user_id])
     @x= Transact.order(:amount)
     respond_to do |format|
       format.html

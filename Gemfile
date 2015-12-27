@@ -5,6 +5,9 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.8'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
+group :development, :test do
+  gem 'rspec-rails',  ">= 2.0.0.beta"
+end
 gem 'pg'
 gem 'protected_attributes'
 # Use SCSS for stylesheets
