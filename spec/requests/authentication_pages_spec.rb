@@ -1,10 +1,9 @@
-require 'spec_helper'
-
-RSpec.describe "AuthenticationPages", type: :request do
-  describe "GET /authentication_pages" do
-    it "works! (now write some real specs)" do
-      get authentication_pages_index_path
-      expect(response).to have_http_status(200)
-    end
+require_relative '../spec_helper'
+describe "Authentication" do
+  subject { page }
+  describe "signin page" do
+    before { visit signin path }
+    it { should have selector('h1', text: 'Sign in') }
+    it { should have selector('title', text: 'Sign in') }
   end
 end

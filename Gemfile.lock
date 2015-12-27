@@ -135,7 +135,7 @@ DEPENDENCIES
   pg
   protected_attributes
   rails (= 4.1.8)
-  rspec-rails (>= 2.0.0.beta)
+  rspec-rails
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   turbolinks
