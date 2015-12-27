@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <th>Card_id</th>
+    <th>Vendor_id</th>
+    <th>Amount</th>
+    <th>Date</th>
+  </tr>
+  <% @date.each do |post| %>
+    <% if post.vendor_id == @z %>
+      <tr>
+        <td><%= post.card_id %></td>
+        <td><%= post.vendor_id %></td>
+        <td><%= post.amount %></td>
+        <td><%= post.date %></td>
+      </tr>
+    <% end %>
+  <% end %>
+</table>
