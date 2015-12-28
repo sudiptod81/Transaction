@@ -1,2 +1,14 @@
-<% provide(:title, "Sign in") %>
-<h1>Sign in</h1>
+You are in the 'login' section
+<%= form_for @user do |f| %>
+  <p>
+    <%= f.label :username %><br />
+    <%= f.text_field :username %><br />
+  </p>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.text_field :password %><br />
+  </p>
+  <p>
+    <%= f.submit "Log In" %>
+  </p>
+  <% end %>
