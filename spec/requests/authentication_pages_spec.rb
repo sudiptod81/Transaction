@@ -1,9 +1,12 @@
 require_relative '../spec_helper'
 describe "Authentication" do
   subject { page }
-  describe "signin page" do
-    before { visit signin path }
-    it { should have selector('h1', text: 'Sign in') }
-    it { should have selector('title', text: 'Sign in') }
+  describe "signin" do
+    before { visit signin_path }
+    describe "with invalid information" do
+      before { click button "Sign in" }
+      it { should have_selector('title', text: 'Sign in') }
+      it { should have_selector(div.alert.alert-error', text: 'Invalid') }
+    end
   end
 end
