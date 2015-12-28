@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20151228075321) do
     t.string   "password"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "remember_token", limit: nil
   end
 
   create_table "vendors", force: true do |t|

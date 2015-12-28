@@ -14,11 +14,10 @@ describe "Authentication" do
         fill in "Email", with: user.email
         fill in "Password", with: user.password
         click button "Sign in"
-      end
-      it { should have selector('title', text: user.name) }
-      it { should have link('Profile', href: user path(user)) }
-      it { should have link('Sign out', href: signout path) }
-      it { should not have link('Sign in', href: signin path) }
     end
+    it { should have selector('title', text: user.name) }
+    it { should have link('Profile', href: user path(user)) }
+    it { should have link('Sign out', href: signout path) }
+    it { should not have link('Sign in', href: signin path) }
   end
 end

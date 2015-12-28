@@ -8,6 +8,7 @@ gem 'rails', '4.1.8'
 group :development, :test do
   gem 'rspec-rails'
 end
+gem 'bcrypt'
 gem 'pg'
 gem 'protected_attributes'
 # Use SCSS for stylesheets
