@@ -1,12 +1,11 @@
-require 'spec helper'
+require 'spec_helper'
 describe User do
 	before do
-			@user = User.new(name: "Example User", email: "user@example.com",
-			password: "foobar", password confirmation: "foobar")
+			@user = User.new(username: "Example User",password: "foobar")
 	end
 	subject { @user }
 	describe "remember token" do
 		before { @user.save }
-		its(:remember token) { should not be blank }
+		its(:remember_token) {puts "BLUuuee"}
 	end
 end

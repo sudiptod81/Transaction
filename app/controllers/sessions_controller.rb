@@ -13,5 +13,8 @@ class SessionsController < ApplicationController
     end
   end
   def destroy
+    sign_out
+    #self.current_user = nil
+    cookies.delete(:remember_token)
   end
 end
