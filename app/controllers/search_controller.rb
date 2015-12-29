@@ -1,5 +1,6 @@
 class SearchController < ApplicationController
   def index
+    puts "SEARCH"
     @x= Transact.order(:amount)
     respond_to do |format|
       format.html
