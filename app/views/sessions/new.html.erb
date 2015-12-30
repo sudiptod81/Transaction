@@ -1,5 +1,5 @@
 You are in the 'login' section
-<%= form_for @user do |f| %>
+<%= form_for(:session, url: sessions_path) do |f| %>
   <p>
     <%= f.label :username %><br />
     <%= f.text_field :username %><br />

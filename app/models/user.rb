@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   attr_accessible :username, :password
-  has_secure_password
+  #has_secure_password
   before_save { |user| user.username = username.downcase }
   before_save :create_remember_token
   private

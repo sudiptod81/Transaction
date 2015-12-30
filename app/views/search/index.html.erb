@@ -1,1 +1,5 @@
-You have to choose whether you want to refine your search with date or vendor or both
+<% if signed_in? %>
+  You have to choose whether you want to refine your search with date or vendor or both
+<% else %>
+  Not logged
+<% end %>
